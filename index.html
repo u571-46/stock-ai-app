@@ -52,7 +52,7 @@ function generateMeta(context) {
 
 async function generateAll() {
   for (let item of files) {
-    const context = await analyzeImage(item.file);
+    const context = analyzeImage(item.file);
     item.meta = generateMeta(context);
   }
 
