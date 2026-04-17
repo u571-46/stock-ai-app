@@ -29,26 +29,17 @@ fileInput.addEventListener('change', (e) => {
   render();
 });
 
-async function analyzeImage(file) {
-  const reader = new FileReader();
+function analyzeImage(file) {
+  const name = file.name.toLowerCase();
 
-  return new Promise((resolve) => {
-    reader.onload = () => {
-      // SIMULASI AI VISION (bisa diganti API nanti)
-      const name = file.name.toLowerCase();
+  let context = "urban daily life";
 
-      let context = "urban daily life";
+  if (name.includes('warung') || name.includes('food')) context = "street food vendor";
+  else if (name.includes('macet') || name.includes('traffic')) context = "traffic congestion";
+  else if (name.includes('motor')) context = "motorcycle transportation";
+  else if (name.includes('hp') || name.includes('phone')) context = "smartphone usage";
 
-      if (name.includes('warung') || name.includes('food')) context = "street food vendor";
-      else if (name.includes('macet') || name.includes('traffic')) context = "traffic congestion";
-      else if (name.includes('motor')) context = "motorcycle transportation";
-      else if (name.includes('hp') || name.includes('phone')) context = "smartphone usage";
-
-      resolve(context);
-    };
-
-    reader.readAsDataURL(file);
-  });
+  return context;
 }
 
 function generateMeta(context) {
