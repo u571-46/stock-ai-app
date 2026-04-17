@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Stock AI Auto Detect</title>
-  <style>
-    body { font-family: Arial; padding: 15px; }
-    input, textarea, button { width: 100%; margin-top: 10px; padding: 10px; }
-    .card { border: 1px solid #ddd; padding: 10px; margin-top: 15px; border-radius: 10px; }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stock AI</title>
 </head>
 <body>
 
+<h1>Stock AI Uploader</h1>
+<p>Kalau ini muncul, berarti berhasil.</p>
+
+</body>
+</html>
 <h2>Stock AI Auto Detect (HP PRO)</h2>
 
 <input type="file" id="fileInput" multiple />
